@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Form</title>
+
+        <style>
+            body{
+                min-height: 1000px;
+            }
+            *{
+                margin : 0 ;
+                padding :0 ;
+            } 
+            form{
+                width: 600px;
+                padding: 20px;
+            }
+
+            form div {
+                margin: 10px;
+            }
+
+            label{
+                display: block;
+            }
+
+            input:invalid{
+                border: none;
+                outline : 2px solid red;
+                border-radius: 2px;
+            }
+
+            input:valid{
+                border: 1px solid black;
+                outline : inherit;
+                border-radius: inherit;
+            }
+
+        </style>
+    </head>
+    <body>
+
+        <!-- Tipe Pada input -->
+         <form action="" method="post" autocomplete="off">
+             <!-- autocomplete untuk mematikan history inputan yang pernah kita masukan  -->
+
+             <div>
+                 <label for="nama">Masukkan Nama: </label>
+                 <input type="text" name="nama" id="nama" autofocus >
+                 <!-- atuofocus berfungis untuk kursor akan otomatis memilih baris inputan yang di berikan atribut atofocus saat dibuka  -->
+                </div>
+                
+                
+                <div>
+                    <label for="email">Masukkan Email: </label>
+                    <input type="email" name="email" id="email" required>
+                    <!-- required berfungsi untuk memberikan informasi ketika inputan belum terisi  -->
+                </div>
+
+                <div>
+                    <label for="nohp">Masukkan No HP: </label>
+                    <input type="tel" name="nohp" id="nohp">
+                </div>
+
+                <div>
+                    <label for="website">Masukkan Website: </label>
+                    <input type="url" name="website" id="website" minlength="2" maxlength="6">
+                    <!-- minlegth berfungsi untuk meminimalka inputan berapa yang akan dimasukan  -->
+                    <!-- untuk Maxlengt kebalikannya  -->
+                </div>
+
+                <div>
+                    <label for="Angka">Masukkan Angka: </label>
+                    <input type="number" name="Angka" id="Angka" min="10" max="100" step="10" >
+                    <!-- sama seperti minlength dan maxlenght kusus angka -->
+                    <!-- Step kelipatan angka  -->
+                </div>
+
+                <div>
+                    <label for="Slider">Masukkan Angka: </label>
+                    <span class="awal"></span>
+                    <input type="range" name="Slider" id="Slider" min="0" max="100" step="5">
+                    <span class="akhir"></span>
+                    
+                </div>
+
+                <div>
+                    <label for="date">Masukkan Tanggal: </label>
+                    <input type="date" name="date" id="date">
+                </div>
+
+                <div>
+                    <label for="waktu">Masukkan Jam: </label>
+                    <input type="time" name="waktu" id="waktu">
+                </div>
+
+                <div>
+                    <label for="warna">Masukkan Warna: </label>
+                    <input type="color" name="warna" id="warna">
+                    <span class="hexa"></span>
+                </div>
+
+                 <div>
+                 <label for="kodepos">Masukkan Kode Pos: </label>
+                 <input type="text" name="kodepos" id="kodepos" pattern="^([1-9])[0-9]{4}$" >
+                <!-- pattern memasukan inputan yang spesifik atau ada aturannya -->
+                </div>
+            
+
+                
+                <div>
+                    <button type="submit">Kirim!</button>
+                </div>
+
+            <!-- Atribut  -->
+
+         </form>
+
+         <script>
+            const slider= document.querySelector('#Slider')
+            const awal= document.querySelector('.awal')
+            const akhir= document.querySelector('.akhir')
+
+            awal.innerHTML = slider.min;
+            akhir.innerHTML=slider.value;
+            slider.addEventListener('input', function(){
+                akhir.innerHTML = slider.value;
+
+            });
+
+            const warna = document.querySelector('#warna');
+            const hexa = document.querySelector('.hexa');
+
+            hexa.innerHTML = warna.value;
+
+            warna.addEventListener('input', function(){
+                hexa.innerHTML = warna.value;
+                hexa.style.color = warna.value;
+            });
+         </script>
+    </body>
+</html>
