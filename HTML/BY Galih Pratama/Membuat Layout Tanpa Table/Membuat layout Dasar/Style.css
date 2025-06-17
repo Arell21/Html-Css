@@ -1,0 +1,33 @@
+.header{
+    background-color: #eee;
+    min-height: 50px;
+    text-align: center;
+}
+
+.content{
+    background-color: #ddd;
+    min-height: 500px;
+}
+.footer {
+    background-color: #ccc;
+    min-height: 50px;
+}
+
+.container {
+    width: 800px;
+    margin: 0 auto;
+
+}
+.logo img {
+    width: 200px;
+}
+.menu ul {
+    padding: 0;
+}
+.menu ul li {
+    display: inline-block;
+}
+.menu ul li a {
+    padding: 10px 20px;
+    text-decoration: none;
+}
