@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Membuat Table</title>
+        <style>
+    
+            table,th,td {
+                border :1px solid red ;
+            }
+
+            table{
+                border-collapse: collapse;
+                width: 100%;
+            }
+
+            th{
+                height: 50px;
+            }
+
+            th,td {
+                padding:15px;
+                text-align: left;
+            }
+
+            tr:hover{
+                background-color: #f5f5f5;
+            }
+
+            tr:nth-child(even){
+                background-color: #f2f2f2;
+            }
+            
+        </style>
+    </head>
+    <body>
+        <table border="1" cellspasing="4" cellpadding="4">
+            <tr>
+                <th>Language</th>
+                <th>Framework</th>
+            </tr>
+            <tr>
+                <td rowspan="2">Php</td>
+                <td>Laravel</td>
+            </tr>
+            <tr>
+                <td>Codeigniter</td>
+            </tr>
+            <tr>
+                <td rowspan="2">Ruby</td>
+                <td>Ruby on Rails</td>
+            </tr>
+            <tr>
+                <td>Sinatra</td>
+            </tr>
+              
+            </table>
+    </body>
+</html>

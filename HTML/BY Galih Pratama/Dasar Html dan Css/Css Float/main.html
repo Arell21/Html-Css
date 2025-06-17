@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        body{
+            min-height: 1000px;
+        }
+        .float-left{
+            padding-right: 10px;
+            float: left;
+        }
+        .float-right{
+            padding-right: 10px;
+            float: right;
+        }
+
+        .box-left{
+            background-color: orange;
+            color: white;
+            text-align: center;
+            margin: 5px;
+            padding: 5px;
+            font-size: 40px;
+            width: 40px;
+            height: 40px;
+
+            float: left;
+
+        }
+        .box-right{
+            background-color: orange;
+            color: white;
+            text-align: center;
+            margin: 5px;
+            padding: 5px;
+            font-size: 40px;
+            width: 40px;
+            height: 40px;
+
+            float: right;
+
+        }
+
+
+        #sidebar-left,#sidebar-right,#content {
+            background-color: orange;
+            margin: 5px;
+            padding: 5px;
+            height: 100px;
+
+            float: left;
+        }
+
+        #sidebar-left { width: 100px;}
+        #content { width: 200px;}
+        #sidebar-right {width: 100px;}
+
+        
+    </style>
+</head>
+
+<body>
+    
+    <img src="img/image-1.jpeg" alt="" class="float-left">
+    <br>
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quas beatae aliquam perferendis ipsam reprehenderit, odit delectus minus adipisci ea libero dolore! Quos, tempore officia provident assumenda quasi voluptates quo sapiente!</p>
+
+<br>
+<br>
+
+    <img src="img/image-1.jpeg" alt="" class="float-right">
+    <br>
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quas beatae aliquam perferendis ipsam reprehenderit, odit delectus minus adipisci ea libero dolore! Quos, tempore officia provident assumenda quasi voluptates quo sapiente!</p>
+
+    <br>
+    <br>
+
+    <div class="box-left">1</div>
+    <div class="box-left">2</div>
+    <div class="box-left">3</div>
+    <div class="box-left">4</div>
+    <div class="box-left">5</div>
+    <div class="box-left">6</div>
+<br>
+<br>
+<br>
+<br>
+<br>
+    
+    <div class="box-right">1</div>
+    <div class="box-right">2</div>
+    <div class="box-right">3</div>
+    <div class="box-right">4</div>
+    <div class="box-right">5</div>
+    <div class="box-right">6</div>
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+<div id="sidebar-left">left sidebar</div>
+<div id="content">content</div>
+<div id="sidebar-right">right sidebar</div>
+
+</body>
+</html>
